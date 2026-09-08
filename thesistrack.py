@@ -17,7 +17,6 @@ Built using only core Python.
 No external libraries are required.
 """
 
-
 # ================================================================
 # RECORD LAYOUT
 # ================================================================
@@ -54,6 +53,7 @@ THESIS_NAMES = [
     "Other"
 ]
 
+OVERCONFIDENCE_ERROR_THRESHOLD = 10
 
 # ================================================================
 # INPUT VALIDATION
@@ -249,8 +249,12 @@ def assess_confidence(confidence, forecast_error, direction):
     if confidence == 3 and direction == "Incorrect":
         return "Potential Overconfidence"
 
-    elif confidence == 3 and forecast_error > 10:
+    elif (
+    confidence == 3
+    and forecast_error > OVERCONFIDENCE_ERROR_THRESHOLD
+         ):
         return "Potential Overconfidence"
+
 
     elif confidence == 3 and forecast_error <= 5:
         return "Well Aligned"
@@ -269,7 +273,7 @@ def assess_confidence(confidence, forecast_error, direction):
 def assess_decision_quality(direction, dollar_pnl):
     if dollar_pnl > 0:
         if direction == "Correct":
-            return "CORRECT THESIS / POSITIVE OUTCOME"
+            return "CORRECT DIRECTION / POSITIVE OUTCOME"
         else:
             return "POSITIVE OUTCOME / FORECAST MISS"
 
@@ -416,7 +420,7 @@ def print_investment_summary(record):
     print(f"Ticker: {record[IDX_TICKER]}")
     print(f"Thesis Type: {THESIS_NAMES[record[IDX_THESIS_TYPE]]}")
     print(f"Confidence: {CONFIDENCE_NAMES[record[IDX_CONFIDENCE]]}")
-
+    
     print()
 
     print(
@@ -756,6 +760,11 @@ def thesis_type_analytics(portfolio):
         print(THESIS_NAMES[thesis_type])
 
         print(
+            f"Investments Analysed: "
+            f"{len(matching)}"
+        )
+
+        print(
             f"Capital-Weighted Return: "
             f"{weighted_return:+.2f}%"
         )
@@ -892,6 +901,10 @@ def main():
     print("Investment Decision Quality Analyzer")
     print("=========================================")
 
+    print("For educational and analytical purposes only.")
+    print("This tool does not provide investment advice.")
+    print()
+
     portfolio = []
 
     while True:
@@ -942,7 +955,7 @@ def main():
         best_accuracy_type,
         best_accuracy_value
     )
-input("\nPress Enter to close ThesisTrack...")
+    input("\nPress Enter to close ThesisTrack...")
 
 if __name__ == "__main__":
     main()
