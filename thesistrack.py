@@ -882,12 +882,10 @@ def investor_profile(
     )
 
     print("=========================================")
-
-
+    
 # ================================================================
 # MAIN PROGRAM
 # ================================================================
-
 def main():
     print("=========================================")
     print("THESISTRACK")
@@ -933,7 +931,6 @@ def main():
     ) = thesis_type_analytics(
         portfolio
     )
-
     investor_profile(
         portfolio_return,
         direction_accuracy,
@@ -945,11 +942,7 @@ def main():
         best_accuracy_type,
         best_accuracy_value
     )
-
-
-# ================================================================
-# RUN PROGRAM
-# ================================================================
+input("\nPress Enter to close ThesisTrack...")
 
 if __name__ == "__main__":
     main()
