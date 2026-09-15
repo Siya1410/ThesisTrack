@@ -1,259 +1,441 @@
 # ThesisTrack
 
-### A Python-Based Investment Decision Quality Analyzer
+**A Python-based Investment Decision Quality Analyzer**
 
-> **Can a profitable investment still come from a poor forecast?**
+ThesisTrack is a finance-focused decision-support tool designed to help investors evaluate the quality of an investment thesis before making an investment decision.
 
-ThesisTrack is a Python project designed to evaluate investment decisions beyond simple profit and loss.
+The project combines structured investment reasoning, confidence assessment, behavioural analysis, thesis classification, and portfolio-level review into a single Python-based framework.
 
-Instead of asking only whether an investment made money, ThesisTrack compares the investor's original expectations with the realised outcome to explore forecast accuracy, confidence, investment thesis performance, and decision outcomes.
+---
+
+## Project Overview
+
+Investment decisions are often influenced by conviction, incomplete reasoning, behavioural bias, and inconsistent evaluation.
+
+ThesisTrack was developed to introduce a more structured approach to investment decision-making.
+
+Instead of simply asking whether an investment is attractive, ThesisTrack evaluates the reasoning behind the investment thesis and helps identify whether the decision is supported by a strong analytical foundation.
+
+The project is designed as a decision-support framework rather than an investment recommendation system.
+
+---
+
+## Key Features
+
+ThesisTrack V1 includes:
+
+- Core investment decision engine
+- Investment thesis evaluation
+- Confidence review
+- Thesis classification
+- Decision outcome classification
+- Multi-investment portfolio review
+- Investor behaviour analytics
+- Thesis-type analytics
+- Investor profiling
+- Input validation
+
+---
+
+## How ThesisTrack Works
+
+The program guides the user through a structured investment review.
+
+The user provides information about an investment thesis through a series of inputs.
+
+ThesisTrack then evaluates the information across several dimensions.
+
+The process broadly follows:
+
+1. Enter investment-related information
+2. Evaluate the investment thesis
+3. Review the investor's confidence level
+4. Classify the thesis
+5. Analyse behavioural characteristics
+6. Generate a decision outcome
+7. Compare multiple investment decisions where applicable
+8. Review portfolio-level patterns
+
+The goal is not to predict future stock prices.
+
+Instead, ThesisTrack focuses on evaluating the **quality of the investment decision-making process**.
+
+---
+
+## Decision Analysis Framework
+
+ThesisTrack examines several components of an investment decision.
+
+### Investment Thesis
+
+The program evaluates the reasoning supporting an investment idea and helps determine whether the thesis is sufficiently developed.
+
+### Confidence Review
+
+The system examines the investor's level of confidence in the investment thesis.
+
+This can help distinguish between:
+
+- high-confidence decisions supported by reasoning
+- uncertain decisions
+- potentially overconfident decisions
+
+### Thesis Classification
+
+Investment theses can be classified according to their characteristics and reasoning structure.
+
+This provides a more structured way to compare different investment ideas.
+
+### Decision Outcome Classification
+
+ThesisTrack produces a structured decision outcome based on the information provided by the user.
+
+### Investor Behaviour Analytics
+
+The project also considers behavioural elements that may influence investment decisions.
+
+This helps identify patterns in how investors approach decisions rather than focusing only on the investment itself.
+
+### Portfolio Review
+
+ThesisTrack can evaluate multiple investment decisions to identify patterns across a broader portfolio of investment theses.
+
+---
+
+## Project Structure
+
+```text
+ThesisTrack/
+│
+├── data/
+│   └── Case-study datasets and analytical outputs
+│
+├── presentation/
+│   └── Final ThesisTrack project presentation
+│
+├── visuals/
+│   └── Project charts and visualizations
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── thesis_track.py
+```
+
+## Main Files
+
+### `thesis_track.py`
+
+The main Python program containing the ThesisTrack investment decision analysis framework.
+
+### `data/`
+
+Contains the dataset and results used to demonstrate the application of ThesisTrack.
+
+### `visuals/`
+
+Contains visualizations produced for the project and case-study analysis.
+
+### `presentation/`
+
+Contains the final presentation explaining the project, methodology, case study, and findings.
+
+### `requirements.txt`
+
+ThesisTrack V1 uses no external Python libraries.
+
+### `LICENSE`
+
+Contains the license governing the use of the project.
+
+---
+
+## Technology
+
+ThesisTrack V1 is built entirely using **core Python**.
+
+No external Python libraries are required.
+
+This was an intentional design choice to keep the application:
+
+- lightweight
+- easy to run
+- portable
+- understandable
+- dependency-free
+
+### Language
+
+- Python 3
+
+### External Dependencies
+
+None.
+
+The project uses Python's built-in functionality only.
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Siya1410/ThesisTrack.git
+```
+
+Move into the project directory:
+
+```bash
+cd ThesisTrack
+```
+
+No additional packages need to be installed.
+
+---
+
+## Running ThesisTrack
+
+Run the main Python file:
+
+```bash
+python thesis_track.py
+```
+
+Depending on your system, you may need to use:
+
+```bash
+python3 thesis_track.py
+```
+
+The program will then guide you through the investment analysis using interactive inputs.
+
+---
+
+## Example Workflow
+
+A typical ThesisTrack analysis may follow this process:
+
+```text
+Investment Idea
+      ↓
+Investment Thesis
+      ↓
+Confidence Review
+      ↓
+Thesis Classification
+      ↓
+Behavioural Analysis
+      ↓
+Decision Evaluation
+      ↓
+Final Decision Classification
+```
+
+For multiple investments, the program can also analyse patterns across the investor's broader decision portfolio.
+
+---
+
+## Case Study
+
+A case study is included in the repository to demonstrate how ThesisTrack can be applied to investment decision analysis.
+
+The case study demonstrates how structured investment reasoning can be transformed into measurable decision-quality indicators.
+
+Supporting materials can be found in:
+
+- `data/`
+- `visuals/`
+- `presentation/`
+
+The case study is intended to demonstrate the analytical framework rather than provide investment recommendations.
+
+---
+
+## Visual Analysis
+
+The `visuals/` folder contains charts and analytical outputs generated as part of the ThesisTrack case study.
+
+These visualizations help demonstrate:
+
+- investment decision patterns
+- thesis characteristics
+- confidence levels
+- behavioural tendencies
+- portfolio-level observations
 
 ---
 
 ## Why I Built ThesisTrack
 
-While learning Python, I wanted to apply programming fundamentals to a problem connected to my interest in finance and analytics.
+Investment analysis often focuses heavily on outcomes.
 
-Investment performance is often judged purely by the final return. However, a positive outcome does not necessarily mean that the original forecast was accurate.
+However, a profitable investment does not necessarily mean that the original decision was analytically strong.
 
-ThesisTrack was created to explore a different question:
+Similarly, an investment that performs poorly does not automatically mean that the underlying reasoning was poor.
 
-**How well did the investor's expectations match what actually happened?**
+This project therefore focuses on a different question:
 
-The project combines introductory Python programming with investment analysis and elements of behavioural decision-making.
+> **Was the investment decision supported by a high-quality investment thesis and a structured reasoning process?**
 
----
-
-## What ThesisTrack Analyses
-
-For each investment, the user enters:
-
-- Ticker
-- Purchase price
-- Current or sale price
-- Number of shares
-- Dividend received per share
-- Expected return
-- Confidence level
-- Investment thesis type
-
-ThesisTrack then calculates:
-
-- Initial investment
-- Ending market value
-- Dividend income
-- Total profit or loss
-- Actual total return
-- Forecast error
-- Forecast direction accuracy
-- Confidence assessment
-- Decision outcome classification
+ThesisTrack was developed to explore the distinction between **investment outcome quality** and **investment decision quality**.
 
 ---
 
-## Portfolio-Level Analytics
+## Project Objectives
 
-When multiple investments are entered, ThesisTrack produces a portfolio review including:
+The primary objectives of ThesisTrack are to:
 
-- Total capital invested
-- Total ending value
-- Portfolio profit or loss
-- Portfolio return
-- Number of profitable and loss-making investments
-- Best and worst performers
-- Directional forecast accuracy
-- Average forecast error
-- High-confidence forecast accuracy
-- Potential overconfidence flags
+- introduce structure into investment decision-making
+- improve investment-thesis evaluation
+- identify behavioural patterns
+- analyse investor confidence
+- distinguish decision quality from investment outcomes
+- support more disciplined investment reasoning
+- create a framework that can be expanded into a more advanced investment analytics system
 
 ---
 
-## Investment Thesis Analytics
+## Current Scope
 
-Investments can be classified as:
+ThesisTrack V1 focuses primarily on:
 
-1. Growth
-2. Value
-3. Dividend
-4. Momentum
-5. Other
+- structured qualitative investment analysis
+- investment thesis assessment
+- confidence evaluation
+- behavioural analysis
+- decision classification
+- portfolio-level thesis review
 
-ThesisTrack compares thesis categories using:
-
-- Number of investments analysed
-- Capital-weighted return
-- Forecast direction accuracy
-
-This allows the user to explore whether certain investment approaches have historically produced stronger outcomes or more accurate forecasts.
+The current version does not attempt to forecast security prices or generate automated buy/sell recommendations.
 
 ---
 
-## Confidence Review
+## Limitations
 
-Users classify their confidence as:
+ThesisTrack V1:
 
-- Low
-- Medium
-- High
+- does not use live market data
+- does not perform automated valuation
+- does not conduct portfolio optimisation
+- does not include historical backtesting
+- does not currently calculate advanced risk-adjusted performance metrics
+- relies on user-provided information
+- does not guarantee investment performance
 
-ThesisTrack then compares confidence with forecast performance.
-
-For example, a high-confidence forecast with an incorrect direction or a forecast error above the defined threshold may be flagged as:
-
-**Potential Overconfidence**
-
-This is intended as a simple analytical heuristic rather than a psychological diagnosis.
-
----
-
-## Decision Outcome Framework
-
-ThesisTrack separates forecast direction from financial outcome.
-
-Possible classifications include:
-
-- Correct Direction / Positive Outcome
-- Positive Outcome / Forecast Miss
-- Correct Direction / Negative Outcome
-- Forecast Miss / Negative Outcome
-- Breakeven variations
-
-This distinction is central to the project:
-
-> **A good outcome and a good forecast are not necessarily the same thing.**
-
----
-
-## Python Concepts Used
-
-ThesisTrack V1.0 was built using core Python concepts including:
-
-- Variables
-- User input
-- Numeric conversion
-- Conditional statements
-- `for` and `while` loops
-- Functions
-- Return values
-- Lists
-- Exception handling using `try` / `except`
-- Input validation
-- Formatted output
-
-No external Python libraries are required for V1.0.
-
----
-
-## How to Run ThesisTrack
-
-Download or clone the repository.
-
-Open a terminal inside the project folder and run:
-
-```bash
-python thesistrack.py
-```
-
-If required on Windows:
-
-```bash
-py thesistrack.py
-```
-
-Follow the prompts to enter investment information.
-
-When finished entering investments, type:
-
-```text
-n
-```
-
-when asked whether you would like to add another investment.
-
-ThesisTrack will then generate the full portfolio and decision-analysis report.
-
----
-
-## Example
-
-### Example Input
-
-```text
-Ticker: TEST
-Purchase Price: 100
-Final Price: 110
-Shares: 10
-Dividend per Share: 2
-Expected Return: 8%
-Confidence: High
-Thesis: Growth
-```
-
-### Example Output
-
-```text
-Initial Investment: $1,000.00
-Ending Market Value: $1,100.00
-Dividend Income: $20.00
-Total Ending Value: $1,120.00
-Profit/Loss: +$120.00
-
-Actual Total Return: +12.00%
-Expected Total Return: +8.00%
-Forecast Error: 4.00 pp
-
-Thesis Direction: CORRECT
-Confidence Review: Well Aligned
-Decision Assessment: CORRECT DIRECTION / POSITIVE OUTCOME
-```
-
----
-
-## Current Limitations
-
-ThesisTrack V1.0 intentionally remains a fundamental Python project.
-
-Current limitations include:
-
-- Investment information is entered manually
-- Returns are holding-period returns rather than annualised returns
-- Transaction costs and taxes are not included
-- Benchmark-relative performance is not yet considered
-- Confidence classifications use simplified rules
-- Forecast-error thresholds are heuristic
-- Results depend on the quality of the user's original expectations
+The quality of the output therefore depends partly on the quality and accuracy of the information entered by the user.
 
 ---
 
 ## Future Development
 
-Potential future versions could incorporate:
+Potential future versions of ThesisTrack may include:
 
-- CSV import and export
-- Historical market-data APIs
-- Pandas for data analysis
-- Matplotlib visualisations
-- Annualised investment returns
-- Benchmark comparison
-- Portfolio risk measures
-- Sector analysis
-- Interactive dashboards
-- More sophisticated confidence-calibration analysis
+- historical backtesting
+- benchmark comparison
+- risk-adjusted performance metrics
+- automated financial-data integration
+- expanded portfolio analytics
+- quantitative investment scoring
+- financial statement integration
+- valuation analysis
+- improved behavioural-finance analytics
+- automated reporting
+- interactive dashboards
+- larger investment datasets
+- machine-learning-supported analysis
+
+These extensions could allow ThesisTrack to evolve from a structured decision-quality framework into a broader investment research and analytics platform.
 
 ---
 
-## Project Philosophy
+## Design Philosophy
 
-ThesisTrack is not designed to predict stock prices or recommend investments.
+ThesisTrack is based on the principle that:
 
-Its purpose is to explore a different question:
+> **Good investment outcomes and good investment decisions are not always the same thing.**
 
-**Was the investment outcome consistent with the expectations and confidence behind the original decision?**
+An investor can make a poorly reasoned decision and still generate a positive return.
+
+Likewise, a well-researched investment thesis may experience an unfavourable outcome because of unexpected market developments.
+
+For this reason, ThesisTrack focuses on analysing the **process behind the investment decision**, rather than judging decisions solely by their final returns.
+
+---
+
+## Learning Outcomes
+
+Developing ThesisTrack involved applying concepts across:
+
+- finance
+- investment analysis
+- behavioural finance
+- decision-making
+- Python programming
+- analytical framework design
+- data interpretation
+- portfolio analysis
+- project documentation
+- financial communication
+
+The project was designed to connect financial reasoning with practical programming and analytical problem-solving.
+
+---
+
+## Repository Contents
+
+The repository includes:
+
+- complete Python source code
+- case-study dataset
+- case-study results
+- analytical visualizations
+- project documentation
+- final project presentation
+- dependency information
+- project license
 
 ---
 
 ## Disclaimer
 
-ThesisTrack was created for educational and analytical purposes only.
+ThesisTrack is an educational and analytical project.
 
-It does not provide financial or investment advice.
+It does **not** constitute financial advice, investment advice, or a recommendation to buy, sell, or hold any financial security.
+
+The framework is intended to support structured thinking and investment research.
+
+Users should conduct their own research and seek appropriate professional advice before making investment decisions.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See the `LICENSE` file for details.
+
+---
+
+## Author
+
+**Siya Sandeep Kulkarni**
+
+Finance undergraduate with interests in:
+
+- Investment Analysis
+- Asset Management
+- Business Analytics
+- Financial Markets
+- Data-Driven Decision Making
+
+---
+
+## Project Status
+
+**ThesisTrack V1 — Completed**
+
+The current version establishes the core investment decision-quality framework.
+
+Future versions may extend the platform with quantitative investment analytics, backtesting, market-data integration, and risk-adjusted performance analysis.
