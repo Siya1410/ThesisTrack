@@ -1,1 +1,2 @@
-
+# No external dependencies required.
+# ThesisTrack V1 uses only Python's standard library.
